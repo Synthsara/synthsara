@@ -1,275 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synthsara: The Revolution for a Harmonious Future</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Smooth Scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    /* Hero Section */
-    header {
-      background-image: url('https://tse3.mm.bing.net/th?id=OIP.RKgvzlttUQW7iV_QxDerkgHaHa&pid=Api'); /* Futuristic City Blending with Nature */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-sizing: border-box;
-      position: relative;
-      overflow: hidden;
-      transition: background-size 0.3s ease;
-    }
-
-    header:hover {
-      background-size: 110%;  /* Subtle zoom effect */
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);  /* Dark overlay for text visibility */
-      z-index: 1;
-    }
-
-    header h1, header p, .cta-btn {
-      z-index: 2;  /* Keep text above the overlay */
-    }
-
-    header h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
-
-    .cta-btn {
-      background-color: #6c9e52; /* Earthy Green */
-      color: white;
-      font-size: 1.2rem;
-      padding: 15px 30px;
-      border: none;
-      cursor: pointer;
-      text-transform: uppercase;
-      margin-top: 20px;
-      border-radius: 5px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      transform: scale(1.1); /* Slight zoom */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow */
-    }
-
-    /* New Blog Button Styling */
-    .blog-btn {
-      background-color: #f1a340; /* Orange for a distinct look */
-      margin-top: 10px; /* Slight spacing from the 'Get Involved' button */
-      text-decoration: none; /* Ensure it's not underlined */
-      display: inline-block;
-    }
-
-    .blog-btn:hover {
-      background-color: #e08a2f; /* Darker orange on hover */
-    }
-
-    /* Section styles */
-    section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
-    }
-
-    .section-title:hover {
-      color: #6c9e52;  /* Change color */
-      text-decoration: underline;  /* Add underline */
-    }
-
-    .section-content {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #333;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .section-content.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Sign-up Form Section */
-    .sign-up-form {
-      background-color: #f7f7f7;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      margin: 40px auto;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .sign-up-form:hover {
-      transform: translateY(-10px); /* Slight lift */
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .sign-up-form input {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .sign-up-form button {
-      width: 100%;
-      padding: 15px;
-      background-color: #6c9e52; /* Earthy Green */
-      color: white;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-transform: uppercase;
-    }
-
-    .sign-up-form button:hover {
-      background-color: #568c42; /* Slightly darker green for hover */
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-      color: #6c9e52; /* Change color on hover */
-    }
-
-    footer:hover {
-      background-color: #444; /* Darken the footer on hover */
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Synthsara - The First and Only Decentralized Government.">
+    <title>Synthsara - Decentralized Governance</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Glowing Header -->
+    <header>
+        <div class="logo-container">
+            <img src="path/to/logo.png" alt="Synthsara Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#impactZones">Impact Zones</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Join the Revolution for a World in Harmony with Nature</h1>
-    <p>Synthsara is the way forward—empowering people, protecting the planet, and realigning humanity with nature’s rhythm.</p>
-    <button class="cta-btn">Get Involved</button>
-    <!-- Corrected Blog Button with target="_blank" and rel="noopener noreferrer" -->
-    <a href="https://medium.com/@stevenpritchard_60506" class="cta-btn blog-btn" target="_blank" rel="noopener noreferrer">To see more about Synthsara and Synthocracy, check out my blog</a>
-  </header>
+    <!-- Hero Section - The Living Energy of Synthocracy -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to Synthsara</h1>
+            <p>The **first and only decentralized government**. **Governance powered by the people, rooted in trust, growing for the future.**</p>
+            <div class="home-cta">
+                <a href="#impactZones" class="cta-button">Join the Revolution</a>
+            </div>
+        </div>
 
-  <section>
-    <h2 class="section-title">What is Synthsara?</h2>
-    <div class="section-content">
-      <p>Synthsara is a decentralized platform that empowers people through ethical data use, transparent governance, and a commitment to aligning humanity with the natural rhythms of the Earth. We're currently in development and need your support!</p>
-    </div>
-  </section>
+        <!-- Pulsing Tree of Life -->
+        <div class="tree-container">
+            <svg id="tree-life" width="400" height="500" viewBox="0 0 400 500">
+                <path class="tree-trunk" d="M200,400 C180,300 220,200 200,100" fill="none" stroke="#e67e22" stroke-width="10"></path>
+                <circle class="tree-root" cx="200" cy="400" r="20" fill="gold"></circle>
+                <circle class="tree-leaf" cx="180" cy="80" r="10" fill="lightgreen"></circle>
+                <circle class="tree-leaf" cx="220" cy="60" r="12" fill="lightgreen"></circle>
+            </svg>
+        </div>
+    </section>
 
-  <section>
-    <h2 class="section-title">The Vision</h2>
-    <div class="section-content">
-      <p>We are building a platform that connects people with the Earth, fosters collaboration, and aligns humanity with sustainable practices. Join the movement to shape a better world.</p>
-    </div>
-  </section>
+    <!-- Global Data Flow -->
+    <div id="data-flow"></div>
 
-  <section>
-    <h2 class="section-title">How You Can Help</h2>
-    <div class="section-content">
-      <p>We’re looking for people who share our vision. Whether you can help with development, funding, or simply spreading the word, your involvement is essential to making this vision a reality.</p>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Synthsara</h2>
+        <p>Synthsara is **the world’s first decentralized government** that puts **power in the people’s hands**. **Blockchain**, **ethical data exchange**, and **participatory governance** create a sustainable future.</p>
+    </section>
 
-  <!-- New Blog Section -->
-  <section>
-    <h2 class="section-title">Read Stories from Steven Pritchard</h2>
-    <div class="section-content">
-      <p>Explore stories, insights, and deep dives from Steven Pritchard on Medium. Learn more about the vision behind Synthsara and Synthocracy.</p>
-      <a href="https://medium.com/@stevenpritchard_60506" class="cta-btn" target="_blank" rel="noopener noreferrer">Read Stories</a>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Synthsara. All rights reserved.</p>
+    </footer>
 
-  <!-- Sign-Up Form Section -->
-  <section>
-    <h2 class="section-title">Join the Movement</h2>
-    <div class="section-content">
-      <p>We need contributors, supporters, and users. Sign up to stay updated and to help us make Synthsara a reality. Together, we can create a harmonious future.</p>
-    </div>
-    <div class="sign-up-form">
-      <form action="https://formspree.io/f/mldglakp" method="POST">
-        <label>
-          Your Name:
-          <input type="text" name="name" placeholder="Your Name" required>
-        </label>
-        <label>
-          Your Email:
-          <input type="email" name="email" placeholder="Your Email" required>
-        </label>
-        <button type="submit">Join the Movement</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <p>Mother Nature's Revolution is Now | Join the Movement Today</p>
-  </footer>
-
-  <script>
-    // Fade-in effect for sections
-    window.addEventListener('scroll', function() {
-      const elements = document.querySelectorAll('.section-content');
-      elements.forEach(element => {
-        const position = element.getBoundingClientRect();
-        if (position.top < window.innerHeight && position.bottom >= 0) {
-          element.classList.add('visible');
-        }
-      });
-    });
-  </script>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
