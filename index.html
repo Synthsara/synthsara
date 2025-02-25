@@ -131,9 +131,19 @@
                 return;
             }
 
-            // Simple example of generating an output based on the input
-            outputDiv.innerHTML = `You want to manifest: <strong>${input}</strong>.<br>Here’s the generated blueprint for your request.`;
-            // You can add code to actually generate more complex outputs like a web design, business plan, etc.
+            // Handle "love" manifestation specifically, as an example
+            if (input.toLowerCase().includes("love")) {
+                outputDiv.innerHTML = `
+                    <strong>Manifesting love...</strong><br>
+                    💖 "I am worthy of love and kindness. Love flows into my life effortlessly." 💖
+                `;
+            } else {
+                // For other types of manifestation requests
+                outputDiv.innerHTML = `
+                    You want to manifest: <strong>${input}</strong>.<br>
+                    🌟 "I am aligned with my desires. What I want is on its way." 🌟
+                `;
+            }
         }
     </script>
 
