@@ -3,109 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthsara Dashboard</title>
+    <title>Synthsara - Empowering Humanity</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
             text-align: center;
+            color: #4CAF50;
+            text-transform: uppercase;
         }
-        #logo {
-            display: block;
-            margin: 0 auto;  /* Centers the logo */
-            width: 200px;    /* Adjust the size */
-            height: auto;    /* Keeps aspect ratio intact */
+        /* Container Styles */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
         }
+        /* Dashboard */
         .dashboard {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
             margin-top: 30px;
         }
         .stat-card {
-            background-color: white;
+            background: #1e1e1e;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 220px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
         .stat-card h3 {
-            margin-top: 10px;
-            font-size: 20px;
+            font-size: 22px;
+            margin-bottom: 10px;
         }
         .stat-card .stat-value {
-            font-size: 32px;
+            font-size: 30px;
             color: #4CAF50;
         }
+        /* Manifestation Bot */
         .manifestation-container {
-            margin-top: 30px;
+            background: #1e1e1e;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         .manifestation-container textarea {
             width: 100%;
-            height: 100px;
+            height: 120px;
             padding: 10px;
             font-size: 16px;
             margin-bottom: 10px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
         }
         .manifestation-container button {
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
+            font-size: 18px;
         }
         .manifestation-container button:hover {
             background-color: #45a049;
         }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #888;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Synthsara</h1>
+            <p>Your journey towards empowerment and unity begins here.</p>
+        </header>
 
-    <h1>Welcome to Synthsara</h1>
+        <!-- Dashboard Section -->
+        <div class="dashboard">
+            <div class="stat-card">
+                <h3>Health</h3>
+                <p class="stat-value" id="health">100</p>
+            </div>
+            <div class="stat-card">
+                <h3>Wealth</h3>
+                <p class="stat-value" id="wealth">50,000</p>
+            </div>
+            <div class="stat-card">
+                <h3>Education</h3>
+                <p class="stat-value" id="education">80%</p>
+            </div>
+            <div class="stat-card">
+                <h3>Sustainability</h3>
+                <p class="stat-value" id="sustainability">70%</p>
+            </div>
+        </div>
 
-    <!-- Logo Section -->
-    <img src="https://raw.githubusercontent.com/SkilledWolf007/synthsara/main/assets/Screenshot_20250215_073425_ChatGPT~2.jpg" alt="Synthsara Logo" id="logo" />
-
-    <!-- Dashboard Section -->
-    <div class="dashboard">
-        <div class="stat-card">
-            <h3>Health</h3>
-            <p class="stat-value" id="health">100</p>
-        </div>
-        <div class="stat-card">
-            <h3>Wealth</h3>
-            <p class="stat-value" id="wealth">50,000</p>
-        </div>
-        <div class="stat-card">
-            <h3>Education</h3>
-            <p class="stat-value" id="education">80%</p>
-        </div>
-        <div class="stat-card">
-            <h3>Sustainability</h3>
-            <p class="stat-value" id="sustainability">70%</p>
+        <!-- Manifestation Bot Section -->
+        <div class="manifestation-container">
+            <h2>Manifestation Bot</h2>
+            <textarea id="manifestationInput" placeholder="Describe what you'd like to manifest..."></textarea>
+            <br>
+            <button onclick="generateManifestation()">Manifest!</button>
+            <div id="manifestationOutput" style="margin-top: 20px; font-size: 18px;"></div>
         </div>
     </div>
 
-    <!-- Manifestation Bot Section -->
-    <div class="manifestation-container">
-        <h2>Manifestation Bot</h2>
-        <textarea id="manifestationInput" placeholder="Tell the Manifestation Bot what you want to manifest..."></textarea>
-        <br>
-        <button onclick="generateManifestation()">Manifest!</button>
-        <div id="manifestationOutput" style="margin-top: 20px; font-size: 18px;"></div>
-    </div>
+    <footer>
+        <p>&copy; 2025 Synthsara. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
 
     <script>
-        // Dashboard Stats
+        // Dashboard Stats (you can dynamically update these from the backend later)
         const stats = {
             health: 100,
             wealth: 50000,
@@ -113,7 +137,7 @@
             sustainability: 70,
         };
 
-        // Manifestation Bot
+        // Manifestation Bot Function
         function generateManifestation() {
             const input = document.getElementById('manifestationInput').value;
             const outputDiv = document.getElementById('manifestationOutput');
@@ -123,10 +147,9 @@
                 return;
             }
 
-            // Simple example of generating an output based on the input
-            outputDiv.innerHTML = `You want to manifest: <strong>${input}</strong>.<br>Here’s the generated blueprint for your request.`;
+            // Simple logic to generate a response based on input
+            outputDiv.innerHTML = `<strong>You want to manifest:</strong> ${input}<br>Here's your personalized blueprint: Success is within reach!`;
         }
     </script>
-    
 </body>
 </html>
