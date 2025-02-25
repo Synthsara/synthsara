@@ -7,27 +7,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: #f4f4f9;
+            color: #333;
             padding: 20px;
-        }
-        h1 {
             text-align: center;
-            font-size: 48px;
-            margin-top: 50px;
         }
-        .glowing-text {
-            color: #fff;
-            text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50;
-            font-weight: bold;
+        #logo {
+            display: block;
+            margin: 0 auto;  /* Centers the logo */
+            width: 200px;    /* Adjust the size */
+            height: auto;    /* Keeps aspect ratio intact */
         }
         .dashboard {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .stat-card {
-            background-color: #34495e;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,18 +39,10 @@
             font-size: 32px;
             color: #4CAF50;
         }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
         .manifestation-container {
             margin-top: 30px;
             padding: 20px;
-            background-color: #34495e;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -81,7 +70,10 @@
 </head>
 <body>
 
-    <h1 class="glowing-text float">Welcome to Synthsara</h1>
+    <h1>Welcome to Synthsara</h1>
+
+    <!-- Logo Section -->
+    <img src="https://raw.githubusercontent.com/SkilledWolf007/synthsara/main/assets/Screenshot_20250215_073425_ChatGPT~2.jpg" alt="Synthsara Logo" id="logo" />
 
     <!-- Dashboard Section -->
     <div class="dashboard">
@@ -131,21 +123,10 @@
                 return;
             }
 
-            // Handle "love" manifestation specifically, as an example
-            if (input.toLowerCase().includes("love")) {
-                outputDiv.innerHTML = `
-                    <strong>Manifesting love...</strong><br>
-                    💖 "I am worthy of love and kindness. Love flows into my life effortlessly." 💖
-                `;
-            } else {
-                // For other types of manifestation requests
-                outputDiv.innerHTML = `
-                    You want to manifest: <strong>${input}</strong>.<br>
-                    🌟 "I am aligned with my desires. What I want is on its way." 🌟
-                `;
-            }
+            // Simple example of generating an output based on the input
+            outputDiv.innerHTML = `You want to manifest: <strong>${input}</strong>.<br>Here’s the generated blueprint for your request.`;
         }
     </script>
-
+    
 </body>
 </html>
